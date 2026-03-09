@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Memuat head.html secara dinamis ke dalam tag head -->
+ <meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="ThemeDox" />
+
+<!-- Favicon Icon -->
+<link rel="icon" href="../assets/img/favicon.png" />
+
+<!-- Site Title -->
+<title>UrinKu - Your Daily Urine Health Checker.</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+<link rel="stylesheet" href="../assets/css/animate.css" />
+<link rel="stylesheet" href="../assets/css/slick.min.css" />
+<link rel="stylesheet" href="../assets/css/odometer.css" />
+<link rel="stylesheet" href="../assets/css/light-gallerr.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-timepicker.min.css" />
+<link rel="stylesheet" href="../assets/css/select2.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+
+<!-- SweetAlert2 CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+  <!-- Start Header Section -->
+  <header id="header" class="cs_site_header cs_style_1 cs_sticky_header cs_heading_font">
+    <script>
+      fetch('../components/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Terjadi kesalahan saat memuat header:', error));
+    </script>
+  </header>
+  <!-- End Header Section -->
+  <!-- Start Page Header -->
+  <section class="cs_page_heading cs_center cs_bg_filed" data-src="../assets/img/img/banner.jpg">
+    <div class="container">
+      <div class="cs_page_heading_in">
+        <h1 class="cs_page_heading_title cs_fs_48 cs_white_color">Form</h1>
+        <ol class="breadcrumb cs_fs_20 cs_white_color cs_heading_font">
+          <li class="breadcrumb-item"><a href="../display/HydraTrack.html"><i class="fa-solid fa-house"></i>HydraTrack</a></li>
+          <li class="breadcrumb-item active">Form</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End Page Header -->
+  <!-- Start Contact Section -->
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <section class="cs_accent_bg">
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <div class="container">
+    <div class="row cs_gap_y_40">
+      <div class="cs_section_heading cs_style_1">
+        <h2 class="cs_section_title cs_fs_48 cs_white_color mb-0">HydraTrack</h2>
+        <div class="cs_height_20 cs_height_lg_20"></div>
+        <div id="formText" class="cs_white_color">Bantu pantau asupan cairan harianmu dengan mudah</div>
+      </div>   
+      <div class="cs_appointment_form_wrapper cs_type_1 cs_radius_10">
+        <h3 class="cs_appointment_heading" id="formHeading">Coba Tracking Sekarang</h3>
+        <!-- Formulir -->
+        <form class="cs_appointment_form row cs_gap_y_30" id="evaluationForm">
+          <div class="col-md-6">
+            <div class="cs_form_field_wrapper cs_radius_10">
+              <input type="text" name="fname" id="fname" class="cs_form_field cs_fs_14" placeholder="Namamu*">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="cs_form_field_wrapper cs_radius_8">
+              <select name="rating" id="rating" class="cs_form_field_wrapper cs_radius_8 cs_select">
+                <option value="">Berapa Gelas Minum hari ini?*</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100">
+              <span class="cs_btn_text">Submit</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+</section>
+
+<!-- Hasil (tersembunyi sebelumnya) -->
+<div id="result" style="display:none; margin-top: 20px;">
+  <h3>Result</h3>
+  <p id="resultMessage" class="result-text"></p> <!-- Menambahkan kelas untuk teks tebal -->
+  <button id="backButton" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_5 w-100">
+    Kembali
+  </button>
+</div>
+
+
+<!-- JavaScript -->
+<script src="../assets/js/script.js"></script> <!-- Menautkan file JavaScript dari folder ../assets -->
+
+
+
+<footer id="footer" class="cs_footer cs_style_1 cs_heading_bg"></footer>
+  <span id="scroll" class="cs_scrollup"></span>
+  <div id="color" class="cs_color_settings"></div>
+
+   <!--footer script-->
+  <script>
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+   <!--scroll script-->
+   <script>
+    fetch('../components/scroll.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('scroll').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+  <!--Color script-->
+  <script>
+    fetch('../components/color.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('color').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+
+ <script>
+  fetch('../components/script.html')
+    .then(response => response.text())
+    .then(data => {
+      const scriptContainer = document.createElement('div');
+      scriptContainer.innerHTML = data; // Memasukkan konten dari script.html ke dalam div sementara
+
+      // Ambil semua elemen <script> dari scriptContainer
+      const scripts = scriptContainer.querySelectorAll('script');
+
+      // Menambahkan setiap skrip ke body
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');  // Membuat elemen script baru
+        newScript.src = script.src || '';  // Jika ada src, tambahkan src
+        newScript.textContent = script.textContent || '';  // Jika ada konten, masukkan ke dalam elemen script
+        document.body.appendChild(newScript);  // Menambahkan script baru ke body untuk dieksekusi
+      });
+    })
+    .catch(error => console.error('Error loading scripts:', error));
+</script>
+
+</body>
+</html>
+

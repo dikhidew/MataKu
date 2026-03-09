@@ -1,0 +1,429 @@
+/*--------------------------------------------------------------
+  19. Pricing
+----------------------------------------------------------------*/
+.cs_pricing_section {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray2-color);
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &.cs_hide_after {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.cs_pricing_table.cs_style_1 {
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 5px rgba(216, 216, 216, 0.4);
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+
+  @media (max-width: 1199px) {
+    padding: 40px 20px;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  &.cs_type_1 {
+    border-radius: 0;
+    box-shadow: none;
+
+    &::after {
+      background: var(--heading-color);
+      opacity: 0.8;
+    }
+
+    .cs_pricing_feature_list li,
+    .cs_pricing_icon,
+    .cs_pricing_head_title,
+    .cs_price_value,
+    .cs_pricing_feature_list,
+    .cs_pricing_feature_title,
+    .cs_pricing_btn {
+      color: var(--white-color);
+    }
+
+    .cs_pricing_icon {
+      background-color: var(--white-color);
+      color: var(--accent-color);
+    }
+
+    .cs_pricing_btn {
+      border-color: var(--white-color);
+      background-color: transparent;
+    }
+  }
+
+  &.cs_type_2 {
+    border-radius: 0;
+    box-shadow: none;
+
+    &::after {
+      background-color: var(--accent-color);
+      opacity: 0.9;
+    }
+
+    .cs_pricing_feature_list li,
+    .cs_pricing_icon,
+    .cs_pricing_head_title,
+    .cs_price_value,
+    .cs_pricing_feature_list,
+    .cs_pricing_feature_title,
+    .cs_pricing_btn {
+      color: var(--white-color);
+    }
+
+    .cs_pricing_icon {
+      color: var(--accent-color);
+    }
+
+    .cs_pricing_btn {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+  }
+  &.cs_type_3 {
+    box-shadow: none;
+  }
+  &.cs_type_4 {
+    box-shadow: none;
+    .cs_pricing_btn {
+      background-color: transparent;
+    }
+    &::after {
+      background-color: var(--gray2-color);
+      opacity: 0.3;
+      border-radius: inherit;
+    }
+  }
+  .cs_pricing_feature_list li,
+  .cs_pricing_icon,
+  .cs_pricing_head_title,
+  .cs_price_value,
+  .cs_pricing_feature_list,
+  .cs_pricing_feature_title,
+  .cs_pricing_btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cs_pricing_headedr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+
+  .cs_pricing_head_title {
+    line-height: 1.42em;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .cs_pricing_head_subtitle {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .cs_price_value {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+    transition: all 0.4s ease-in-out;
+
+    sup {
+      font-size: 16px;
+      position: absolute;
+      top: 12px;
+      left: 5px;
+    }
+
+    sub {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.6em;
+      margin-left: 15px;
+    }
+  }
+
+  .cs_pricing_feature_title {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .cs_pricing_feature_list {
+    padding-bottom: 38px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--heading-color);
+    line-height: 1.57em;
+    margin-bottom: 16px;
+    opacity: 0.9;
+    transition: all 0.4s ease-in-out;
+
+    i {
+      margin-top: 2px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cs_pricing_icon {
+    width: 40px;
+    height: 40px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    span {
+      transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+
+      &:first-child {
+        transform: translateX(-20px);
+      }
+
+      &:last-child {
+        transform: translateX(-8px);
+      }
+    }
+  }
+
+  .cs_pricing_btn {
+    display: block;
+    text-align: center;
+    line-height: 1.56em;
+    padding: 15px 30px;
+    border: 1px solid var(--accent-color);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover,
+  &.active {
+    background-color: var(--accent-color);
+
+    .cs_pricing_feature_list li,
+    .cs_price_value,
+    .cs_pricing_head_title,
+    .cs_pricing_head_subtitle,
+    sup,
+    .sub,
+    .cs_pricing_feature_title {
+      color: var(--white-color);
+    }
+
+    .cs_pricing_icon {
+      background-color: var(--white-color);
+      color: var(--heading-color);
+
+      span {
+        &:first-child {
+          transform: translateX(8px);
+        }
+
+        &:last-child {
+          transform: translateX(22px);
+        }
+      }
+    }
+
+    &.cs_type_1 {
+      .cs_pricing_icon {
+        color: var(--accent-color);
+      }
+
+      .cs_pricing_btn {
+        background-color: var(--white-color);
+        color: var(--accent-color);
+      }
+    }
+
+    &.cs_type_2 {
+      &::after {
+        background-color: var(--white-color);
+        opacity: 1;
+      }
+
+      .cs_pricing_feature_list li,
+      .cs_price_value,
+      .cs_pricing_head_title,
+      .cs_pricing_head_subtitle,
+      sup,
+      .sub,
+      .cs_pricing_feature_title {
+        color: var(--accent-color);
+      }
+
+      .cs_pricing_icon {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+      }
+
+      .cs_pricing_btn {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+      }
+    }
+    &.cs_type_4 {
+      &::after {
+        background-color: var(--accent-color);
+        opacity: 1;
+      }
+      .cs_pricing_btn {
+        background-color: var(--white-color);
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
+Pricing controller 
+----------------------------------------------------------------*/
+.cs_tab {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.cs_pricing_control {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.42em;
+    cursor: pointer;
+    @media (max-width: 991px) {
+      font-size: 22px;
+    }
+
+    &:last-child {
+      a {
+        &::before {
+          left: initial;
+          right: 100%;
+        }
+      }
+    }
+
+    &.active {
+      color: var(--accent-color);
+
+      .cs_switch {
+        &::before {
+          left: 5px;
+        }
+      }
+    }
+  }
+
+  &.cs_type_1 {
+    li {
+      color: var(--white-color);
+
+      &.active {
+        color: var(--accent-color);
+      }
+    }
+
+    .cs_switch {
+      background-color: var(--white-color);
+
+      &::before {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  &.cs_type_2 {
+    li {
+      a {
+        color: var(--white-color);
+      }
+
+      &.active a {
+        opacity: 0.75;
+      }
+    }
+
+    .cs_switch {
+      background-color: var(--white-color);
+
+      &::before {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  .cs_switch {
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    background: var(--heading-color);
+    border-radius: 15px;
+    margin: 0 30px;
+    position: relative;
+    @media (max-width: 991px) {
+      margin: 0 20px;
+    }
+
+    &::before {
+      content: '';
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: var(--white-color);
+      position: absolute;
+      top: 50%;
+      left: 35px;
+      transform: translateY(-50%);
+      transition: all 0.4s ease;
+    }
+  }
+
+  a {
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 24px;
+      width: 60px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      z-index: 1;
+    }
+  }
+}

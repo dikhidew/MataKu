@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="ThemeDox" />
+
+  <link rel="icon" href="../assets/img/favicon.png" />
+
+  <title>Kuesioner OSDI - Penilaian Mata Kering</title>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/slick.min.css" />
+  <link rel="stylesheet" href="../assets/css/odometer.css" />
+  <link rel="stylesheet" href="../assets/css/light-gallerr.min.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-timepicker.min.css" />
+  <link rel="stylesheet" href="../assets/css/select2.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header id="header" class="cs_site_header cs_style_1 cs_sticky_header cs_heading_font">
+    <script>
+      fetch('../components/header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
+  </header>
+
+   <section class="cs_page_heading cs_center cs_bg_filed" data-src="../assets/img/img/banner.jpg">
+    <div class="container">
+      <div class="cs_page_heading_in">
+        <h1 class="cs_page_heading_title cs_fs_48 cs_white_color">Asesmen OSDI</h1>
+        <ol class="breadcrumb cs_fs_20 cs_white_color cs_heading_font">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="breadcrumb-item active">Asesmen OSDI</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+
+  <section class="cs_accent_bg">
+    <div class="cs_height_120 cs_height_lg_80"></div>
+
+    <div class="container">
+      <div class="row cs_gap_y_40">
+
+        <div class="cs_section_heading cs_style_1">
+          <h2 class="cs_section_title cs_fs_48 cs_white_color mb-0">Ocular Surface Disease Index (OSDI)</h2>
+          <div class="cs_height_20"></div>
+          <div id="formText" class="cs_white_color">Pilih jawaban yang paling menggambarkan kondisi mata Anda selama <strong>satu minggu terakhir.</strong></div>
+        </div>
+
+        <div class="cs_appointment_form_wrapper cs_type_1 cs_radius_10">
+          
+          <p id="formCategory" class="cs_fs_20 cs_semibold cs_accent_color mb-2">A. Gejala Mata (Dalam 1 minggu terakhir)</p>
+          
+          <h3 class="cs_appointment_heading mb-4" id="formHeading">
+            1. Apakah mata Anda terasa sensitif terhadap cahaya?
+          </h3>
+
+          <div class="row cs_gap_y_15" id="osdi-buttons" style="position: relative; z-index: 99;">
+            
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="4">
+                <span class="cs_btn_text">Sepanjang waktu (4)</span>
+              </button>
+            </div>
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="3">
+                <span class="cs_btn_text">Sering (3)</span>
+              </button>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="2">
+                <span class="cs_btn_text">Setengah waktu (2)</span>
+              </button>
+            </div>
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="1">
+                <span class="cs_btn_text">Kadang-kadang (1)</span>
+              </button>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="0">
+                <span class="cs_btn_text">Tidak pernah (0)</span>
+              </button>
+            </div>
+            <div class="col-md-6 mb-3">
+              <button type="button" class="btn-osdi cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" data-score="NA">
+                <span class="cs_btn_text">N/A (Tidak Relevan)</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="cs_height_120 cs_height_lg_80"></div>
+  </section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+
+  <script src="../assets/js/assesment-osdi.js"></script>
+
+<footer id="footer" class="cs_footer cs_style_1 cs_heading_bg"></footer>
+  <span id="scroll" class="cs_scrollup"></span>
+  <div id="color" class="cs_color_settings"></div>
+
+   <script>
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+   <script>
+    fetch('../components/scroll.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('scroll').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat scroll:', error));
+  </script>
+  <script>
+    fetch('../components/color.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('color').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat color settings:', error));
+  </script>
+
+  <script>
+    fetch('../components/script.html')
+      .then(res => res.text())
+      .then(html => {
+        const div = document.createElement('div');
+        div.innerHTML = html;
+        div.querySelectorAll("script").forEach(sc => {
+          const s = document.createElement("script");
+          if (sc.src) s.src = sc.src;
+          else s.textContent = sc.textContent;
+          document.body.appendChild(s);
+        });
+      });
+  </script>
+
+</body>
+</html>

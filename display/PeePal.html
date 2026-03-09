@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="ThemeDox" />
+
+<!-- Favicon Icon -->
+<link rel="icon" href="../assets/img/favicon.png" />
+
+<!-- Site Title -->
+<title>UrinKu - Your Daily Urine Health Checker.</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+<link rel="stylesheet" href="../assets/css/animate.css" />
+<link rel="stylesheet" href="../assets/css/slick.min.css" />
+<link rel="stylesheet" href="../assets/css/odometer.css" />
+<link rel="stylesheet" href="../assets/css/light-gallerr.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-timepicker.min.css" />
+<link rel="stylesheet" href="../assets/css/select2.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+
+<!-- SweetAlert2 CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
+  rel="stylesheet"
+/>
+<body>
+  <!-- Start Header Section -->
+  <header id="header" class="cs_site_header cs_style_1 cs_sticky_header cs_heading_font">
+    <script>
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Terjadi kesalahan saat memuat header:', error));
+    </script>
+  </header>
+  <!-- End Header Section -->
+  <!-- Start Page Header -->
+  <section class="cs_page_heading cs_center cs_bg_filed" data-src="../assets/img/img/banner.jpg">
+    <div class="container">
+      <div class="cs_page_heading_in">
+        <h1 class="cs_page_heading_title cs_fs_48 cs_white_color">Peepal</h1>
+        <ol class="breadcrumb cs_fs_20 cs_white_color cs_heading_font">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="breadcrumb-item active">PeePal</li>
+        </ol>
+      </div>
+    </div> 
+  </section>
+  <!-- End Page Header -->
+
+<!-- Start Appointment Section -->
+ <!-- <div class="cs_height_120 cs_height_lg_80"></div>
+ <section class="cs_accent_bg">
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <div class="container">
+    <div class="row cs_gap_y_40">
+        <div class="cs_section_heading cs_style_1">
+          <p class="cs_section_subtitle cs_white_color">Isi Datamu</p>
+          <h2 class="cs_section_title cs_fs_48 cs_white_color mb-0">Get Amazing Treatment For our Specialist Doctors
+          </h2>
+        </div>   
+        <div class="cs_appointment_form_wrapper cs_type_1 cs_radius_10">
+          <h3 class="cs_appointment_heading">Make an Appointment</h3>
+          <form class="cs_appointment_form row cs_gap_y_30">
+            <div class="col-md-6">
+              <div class="cs_form_field_wrapper cs_radius_10">
+                <input type="text" name="name" class="cs_form_field cs_fs_14" placeholder="Your Name">
+              </div>
+            </div>
+            <div class="col-md-6">
+            <div class="cs_form_field_wrapper cs_radius_8">
+                <select name="rating" class="cs_form_field_wrapper cs_radius_8 cs_select" data-placeholder="Select Rating (1-10)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                </select>
+            </div>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg  cs_radius_100">
+                <span class="cs_btn_text">Book An Appointment</span>
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+</section> -->
+<!-- End Appointment Section -->
+ <!-- Start Work Process Section -->
+ <section class="">
+  <div class="cs_height_120 cs_height_lg_40"></div>
+  <div class="container">
+    <div class="cs_section_heading cs_style_1 cs_text_center">
+      <p class="cs_section_subtitle cs_accent_color cs_fs_18 cs_semibold cs_heading_font">PeePal</p>
+      <h2 class="cs_section_title cs_fs_48 mb-0">Ayo Cek Jenis Apa Air Kencingmu <br></h2>
+    </div>
+    <div class="custom-height"></div>
+    <div class="process-grid">
+      <div class="process-item" onclick="showAlert('Kuning pekat')">
+        <div class="process-circle" style="background-color: #D4AC4E;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Kuning Pekat</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Kuning muda')">
+        <div class="process-circle" style="background-color: #F7C85C;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Kuning Muda</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Kuning Bening')">
+        <div class="process-circle" style="background-color: #F9E265;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Kuning Bening</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Bening')">
+        <div class="process-circle" style="background-color: #FFF8A6;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Bening</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Merah')">
+        <div class="process-circle" style="background-color: #F5A9B8;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Merah</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Hijau/Biru')">
+        <div class="process-circle" style="background-color: #81C7B3;">
+          <h3 class=" s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Hijau/Biru</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Oranye')">
+        <div class="process-circle" style="background-color: #FF9A3E;">
+          <h3 class="s_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Oranye</h3>
+        </div>
+      </div>
+      <div class="process-item" onclick="showAlert('Berbusa/Berbuih Banyak')">
+        <div class="process-circle" style="background-color: #D1E4A9;">
+          <h3 class="cs_section_subtitle cs_accent_color cs_fs_20 cs_semibold cs_heading_font">Berbusa/Berbuih Banyak</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="custom-height"></div>
+</section>
+<!-- Link to external JavaScript -->
+<script src="../assets/js/script.js"></script>
+<!-- End Work Process Section -->
+ <footer id="footer" class="cs_footer cs_style_1 cs_heading_bg"></footer>
+  <span id="scroll" class="cs_scrollup"></span>
+  <div id="color" class="cs_color_settings"></div>
+
+   <!--footer script-->
+  <script>
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+   <!--scroll script-->
+   <script>
+    fetch('../components/scroll.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('scroll').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+  <!--Color script-->
+  <script>
+    fetch('../components/color.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('color').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+
+ <script>
+  fetch('../components/script.html')
+    .then(response => response.text())
+    .then(data => {
+      const scriptContainer = document.createElement('div');
+      scriptContainer.innerHTML = data; // Memasukkan konten dari script.html ke dalam div sementara
+
+      // Ambil semua elemen <script> dari scriptContainer
+      const scripts = scriptContainer.querySelectorAll('script');
+
+      // Menambahkan setiap skrip ke body
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');  // Membuat elemen script baru
+        newScript.src = script.src || '';  // Jika ada src, tambahkan src
+        newScript.textContent = script.textContent || '';  // Jika ada konten, masukkan ke dalam elemen script
+        document.body.appendChild(newScript);  // Menambahkan script baru ke body untuk dieksekusi
+      });
+    })
+    .catch(error => console.error('Error loading scripts:', error));
+</script>
+
+</body>
+
+<style>
+/* Custom heights for spacing */
+.custom-height {
+  height: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section heading */
+.section-heading {
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Process Grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom untuk bagian atas */
+  gap: 20px;
+  justify-items: center; /* Agar elemen-elemen rata di tengah */
+}
+
+.process-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Menyusun 3 kolom untuk bagian bawah */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Process Item */
+.process-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Process Circle */
+.process-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px; /* Ukuran lingkaran diperbesar */
+  height: 220px; /* Ukuran lingkaran diperbesar */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Tambahkan box-shadow */
+  text-align: center;
+  position: relative;
+}
+
+.process-tittle{
+  color: white;
+  font-size: 20px; /* Ukuran font diperbesar */
+  font-weight: bold;
+  text-align: center;
+  position: absolute; /* Menempatkan teks secara tepat di tengah */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Memastikan teks berada di tengah */
+  padding: 0 10px; /* Agar teks tidak terlalu menempel pada sisi lingkaran */
+  text-shadow: 2px 2px 4px black; /* Pinggiran hitam pada teks */
+}
+
+/* Hover effect */
+.process-item:hover .process-circle {
+  background-color: #007bff; /* Ganti dengan warna hover yang lebih mencolok */
+  transform: scale(1.05); /* Sedikit memperbesar saat hover */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Efek bayangan untuk menonjolkan warna saat hover */
+}
+
+
+/* Media Query untuk perangkat dengan lebar kurang dari 768px (mobile) */
+@media screen and (max-width: 768px) {
+  /* Atur grid agar lebih fleksibel di layar kecil */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar kecil */
+  }
+
+  .process-grid-bottom {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk bagian bawah pada layar kecil */
+  }
+
+  /* Memperbesar lingkaran agar tetap proporsional */
+  .process-circle {
+    width: 180px; /* Ukuran lingkaran lebih kecil pada mobile */
+    height: 180px; /* Ukuran lingkaran lebih kecil pada mobile */
+  }
+
+  
+  /* Untuk mobile, lebih sedikit padding di container */
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Media Query untuk perangkat dengan lebar kurang dari 480px (mobile portrait) */
+@media screen and (max-width: 480px) {
+  /* Atur grid agar lebih fleksibel di layar sangat kecil */
+  .process-grid {
+    grid-template-columns: 1fr; /* 1 kolom pada layar sangat kecil */
+  }
+
+  .process-grid-bottom {
+    grid-template-columns: 1fr; /* 1 kolom untuk bagian bawah pada layar sangat kecil */
+  }
+
+  /* Ukuran lingkaran lebih kecil untuk layar sangat kecil */
+  .process-circle {
+    width: 150px; /* Ukuran lingkaran lebih kecil pada layar sangat kecil */
+    height: 150px; /* Ukuran lingkaran lebih kecil pada layar sangat kecil */
+  }
+
+}
+
+</style>
+</html>

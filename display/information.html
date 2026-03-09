@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="ThemeDox" />
+
+<!-- Favicon Icon -->
+<link rel="icon" href="../assets/img/favicon.png" />
+
+<!-- Site Title -->
+<title>UrinKu - Your Daily Urine Health Checker.</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+<link rel="stylesheet" href="../assets/css/animate.css" />
+<link rel="stylesheet" href="../assets/css/slick.min.css" />
+<link rel="stylesheet" href="../assets/css/odometer.css" />
+<link rel="stylesheet" href="../assets/css/light-gallerr.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="../assets/css/jquery-timepicker.min.css" />
+<link rel="stylesheet" href="../assets/css/select2.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+
+<!-- SweetAlert2 CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
+  rel="stylesheet"
+/>
+
+<script src="../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
+<script src="../assets/js/jquery.slick.min.js"></script>
+<script src="../assets/js/odometer.js"></script>
+<script src="../assets/js/light-gallery.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery-timepicker.min.js"></script>
+<script src="../assets/js/select2.min.js"></script>
+<script src="../assets/js/ripples.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body>
+  <!-- Start Header Section -->
+  <header id="header" class="cs_site_header cs_style_1 cs_sticky_header cs_heading_font">
+    <script>
+      fetch('../components/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Terjadi kesalahan saat memuat header:', error));
+    </script>
+  </header>
+  <!-- End Header Section -->
+  <!-- Start Page Header -->
+  <section class="cs_page_heading cs_center cs_bg_filed" data-src="../assets/img/img/banner.jpg">
+    <div class="container">
+      <div class="cs_page_heading_in">
+        <h1 class="cs_page_heading_title cs_fs_48 cs_white_color">SiKandung</h1>
+        <ol class="breadcrumb cs_fs_20 cs_white_color cs_heading_font">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="breadcrumb-item active">SiKandung</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End Page Header -->
+  <!-- Start Blog Section -->
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <div class="container">
+    <div class="row cs_row_gap_30 cs_gap_y_30 justify-content-center">
+      <!--Berita 1-->
+      <div class="col-lg-4 col-md-6">
+        <div class="cs_card cs_style_1 cs_radius_10">
+          <a href="../blog/kemih.html" class="cs_card_thumbnail cs_radius_10">
+            <img src="../assets/img/img/MATA.JPG" alt="Card Thumbnail">
+          </a>
+          
+          <div class="cs_card_bio">
+            <p class="cs_card_subtitle cs_fs_14 cs_heading_color">Penyakit</p>
+            <h3 class="cs_card_title cs_fs_24 cs_bold"><a href="../blog/mata.html">Informasi Terkait Dry Eye</a>
+            </h3>
+            <div class="cs_height_70 cs_height_lg_70"></div>
+            <a href="../blog/mata.html" class="cs_card_btn">
+              <span>Learn More</span>
+              <div class="cs_card_btn_icon cs_center">
+                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+              </div>
+            </a>
+            <hr>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+  <!-- End Blog Section -->
+ <footer id="footer" class="cs_footer cs_style_1 cs_heading_bg"></footer>
+  <span id="scroll" class="cs_scrollup"></span>
+  <div id="color" class="cs_color_settings"></div>
+
+   <!--footer script-->
+  <script>
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+   <!--scroll script-->
+   <script>
+    fetch('../components/scroll.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('scroll').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+  <!--Color script-->
+  <script>
+    fetch('../components/color.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('color').innerHTML = data;
+      })
+      .catch(error => console.error('Terjadi kesalahan saat memuat footer:', error));
+  </script>
+
+  <script>
+  fetch('../components/script.html')
+    .then(response => response.text())
+    .then(data => {
+      const scriptContainer = document.createElement('div');
+      scriptContainer.innerHTML = data; // Memasukkan konten dari script.html ke dalam div sementara
+
+      // Ambil semua elemen <script> dari scriptContainer
+      const scripts = scriptContainer.querySelectorAll('script');
+
+      // Menambahkan setiap skrip ke body
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');  // Membuat elemen script baru
+        newScript.src = script.src || '';  // Jika ada src, tambahkan src
+        newScript.textContent = script.textContent || '';  // Jika ada konten, masukkan ke dalam elemen script
+        document.body.appendChild(newScript);  // Menambahkan script baru ke body untuk dieksekusi
+      });
+    })
+    .catch(error => console.error('Error loading scripts:', error));
+</script>
+
+</body>
+</html>
