@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="ThemeDox" />
+
+  <link rel="icon" href="../assets/img/favicon.png" />
+  <title>Tes Buta Warna Ishihara - MataKu</title>
+
+  <style>
+    :root {
+      --accent: #132573 !important;
+      --primary: #132573 !important;
+      --theme-color: #132573 !important;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/slick.min.css" />
+  <link rel="stylesheet" href="../assets/css/odometer.css" />
+  <link rel="stylesheet" href="../assets/css/light-gallerr.min.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../assets/css/jquery-timepicker.min.css" />
+  <link rel="stylesheet" href="../assets/css/select2.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header id="header" class="cs_site_header cs_style_1 cs_sticky_header cs_heading_font">
+    <script>
+      fetch('../components/header.html').then(res => res.text()).then(data => { document.getElementById('header').innerHTML = data; });
+    </script>
+  </header>
+
+   <section class="cs_page_heading cs_center cs_bg_filed" data-src="../assets/img/img/banner.jpg">
+    <div class="container">
+      <div class="cs_page_heading_in">
+        <h1 class="cs_page_heading_title cs_fs_48 cs_white_color">Tes Buta Warna</h1>
+        <ol class="breadcrumb cs_fs_20 cs_white_color cs_heading_font">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="breadcrumb-item active">Tes Color Blind</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+
+  <section class="cs_accent_bg">
+    <div class="cs_height_120 cs_height_lg_80"></div>
+
+    <div class="container">
+      <div class="row cs_gap_y_40 justify-content-center">
+
+        <div class="cs_section_heading cs_style_1 text-center">
+          <h2 class="cs_section_title cs_fs_48 cs_white_color mb-0">Tes Color Blind</h2>
+          <div class="cs_height_20"></div>
+          <div id="formText" class="cs_white_color cs_fs_18">Perhatikan gambar di bawah ini dan ketik angka yang Anda lihat.<br>Jika Anda tidak melihat angka apa pun, biarkan kosong atau isi dengan 0.</div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="cs_appointment_form_wrapper cs_type_1 cs_radius_10 text-center" style="padding: 40px;">
+            
+            <h3 class="cs_appointment_heading mb-4 cs_accent_color" id="formHeading">Gambar 1 dari 14</h3>
+
+            <div class="mb-4">
+              <img id="ishihara-img" src="../assets/img/img/colorblind/1.png" alt="Tes Ishihara" class="img-fluid cs_radius_10" style="max-height: 300px; border: 2px solid #eee;">
+            </div>
+
+            <div class="form-group mb-4">
+              <input type="text" id="ishihara-input" class="form-control text-center mx-auto" placeholder="Ketik angka..." maxlength="2" style="font-size: 24px; font-weight: bold; max-width: 200px; height: 60px;">
+            </div>
+
+            <button type="button" id="btn-submit-answer" class="cs_btn cs_style_1 cs_fs_18 cs_semibold cs_accent_bg cs_radius_100 w-100" style="max-width: 200px;">
+              <span class="cs_btn_text">Kirim Jawaban</span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cs_height_120 cs_height_lg_80"></div>
+  </section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+
+  <footer id="footer" class="cs_footer cs_style_1 cs_heading_bg"></footer>
+  <span id="scroll" class="cs_scrollup"></span>
+  <div id="color" class="cs_color_settings">
+    <div class="cs_color_settings_in">
+      <div class="cs_color_option cs_color_option_bg_1 cs_center active" data-color="#132573"><i class="fa-solid fa-check"></i></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/colorblind.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    fetch('../components/footer.html').then(res => res.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+    fetch('../components/scroll.html').then(res => res.text()).then(data => { document.getElementById('scroll').innerHTML = data; });
+    fetch('../components/script.html')
+      .then(res => res.text())
+      .then(html => {
+        const div = document.createElement('div');
+        div.innerHTML = html;
+        div.querySelectorAll("script").forEach(sc => {
+          const s = document.createElement("script");
+          if (sc.src) s.src = sc.src;
+          else s.textContent = sc.textContent;
+          document.body.appendChild(s);
+        });
+      });
+  </script>
+</body>
+</html>
